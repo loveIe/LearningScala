@@ -49,13 +49,41 @@ object ScalaControlStructures {
 
 
 
-    sum = 0
-    for(i <- 0 to 6  ){
-      sum = sum + i
-      if(i==5) return //return 返回是方法级别的，也就是返回到main上面
-    }
-    //if后语句只有一句的话，就可以直接写上，不需要加上{}
-    println(sum)
+//    sum = 0
+//    for(i <- 0 to 6  ){
+//      sum +=  i
+//      if(i==5) return //return 返回是方法级别的，也就是返回到main上面
+//    }
+//    //if后语句只有一句的话，就可以直接写上，不需要加上{}
+//    println(sum)
+
+      flag=true
+      while(flag){
+        for(item <- "spark"){
+          println(item)
+          if(item=='r')
+            flag=false
+        }
+      }
+      //while循环一般被使用在server和framework中，实际使用为单个线程不停循环
+      //在这个while中因为是嵌套了for循环，那么for循环是一定要完成的，所以说全部都打印
+      //如果想要达到效果需要如下的解释
+
+
+      import scala.util.control.Breaks._
+      flag=true
+      breakable{
+        while(flag){
+          for(item <- "spark"){
+            println(item)
+            if(item == 'r' ){
+              flag=false
+              break
+            }
+          }
+        }
+      }
+      //在此例中如果想要让程序返回就得使用break，使用break就需要导包
   }
 
 
