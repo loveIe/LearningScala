@@ -10,7 +10,7 @@ package Scala_HelloWorld
   * Object ScalaOOPopt 是 ScalaOOPopt 的伴生对象
   * class ScalaOOPopt 是ScalaOOpopt的伴生类
   * scala可以构造很多apply方法
-  * scala很多集合都是使用apply方法构建的 例如array
+  * scala很多集合都是使用apply方法构建的 例如array  c
   */
 
 class ScalaOOPopt(age:Int){
