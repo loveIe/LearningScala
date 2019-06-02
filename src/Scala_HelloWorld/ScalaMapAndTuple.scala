@@ -22,6 +22,11 @@ package Scala_HelloWorld
   *  4.版本的更新迭代 个人感觉相当于测试类
   *  Lazy加载并不是在类创建的时候加载
   *  Spark的伴生对象并不是属于API的方法。
+  *  类继承时，不会继承伴生对象
+  *  类继承时， 成员变量和方法都属于类成员
+  *  isInstanceOf asInstanceOf
+  *  isInstanceOf是父类使用子类实例的某个方法时，判断是否是这个子类
+  *  asInstanceOf是转换
   *
  */
 

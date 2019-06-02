@@ -40,7 +40,7 @@ object ScalaArrayOpt {
 
      scala.util.Sorting.quickSort(array) //scala的排序需要导入包
 
-     println(array.mkString(","))   //mkString 的作用..查看源码可以将数组内容
+     println(array.mkString(","))   //mkString 的作用..查看源码可以将类似Java的ToString方法
 
      val arrayAddOne = for(item <- array ) yield item + 1 //yield 关键字可以在不修改原数组的情况下对原数组的元素进行操作并且组成一个新的数组
      print(arrayAddOne.mkString(" "))
